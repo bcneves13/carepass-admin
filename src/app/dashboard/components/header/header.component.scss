@@ -1,0 +1,26 @@
+@import 'colors.scss';
+
+:host {
+    .toolbar {
+        background-color: getColor(secondary, 60);
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.14);
+        .title{
+            // display: inline;
+            justify-self: center;
+            margin-left: auto;
+            color: getColor(primary, 80);
+        }
+        .user {
+            justify-self: flex-end;
+            margin-right: 1em;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  openapi: 'http://localhost:8080/oapi', // Rotas abertas
+  tokenapi: 'http://localhost:8080/api', // Rotas protegidas por Token/Login
 };
 
 /*

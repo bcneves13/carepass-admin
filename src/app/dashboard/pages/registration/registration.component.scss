@@ -1,0 +1,19 @@
+@import 'colors.scss';
+
+.content {
+    width: 100%;
+    padding: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    .title {
+        margin: 0;
+        font-size: 2.5em;
+        color: getColor(accent);
+        text-transform: uppercase;
+    }
+    .table {
+        width: 100%;
+        margin-top: 1em;
+        display: inline-block;
+    }
+}

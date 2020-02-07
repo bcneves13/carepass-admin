@@ -1,0 +1,51 @@
+@import 'colors.scss';
+
+.container {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    .loading-shade {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        bottom: 56px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        background: getColor(primary, 15);
+    }
+    .table-container {
+        width: 100%;
+        position: relative;
+        .table {
+            width: 100%;
+            mat-header-cell {
+                font-weight: 600;
+                font-size: 1.25em;
+                justify-content: center;
+                text-transform: capitalize;
+                color: getColor(accent);
+            }
+            mat-row {
+                background-color: getColor(primary, 20);
+                &:nth-child(odd) {
+                    background-color: getColor(primary, 10);
+                }
+                &.loading {
+                    background-color: getColor(primary, 0);
+                }
+            }
+            mat-cell {
+                font-size: 1em;
+                font-weight: 500;
+                justify-content: center;
+                text-transform: capitalize;
+                &.loading {
+                    min-height: 300px;
+                }
+            }
+        }
+    }
+}
