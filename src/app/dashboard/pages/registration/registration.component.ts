@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  public tableEndPoint = '/admin/table';
+  public tableEndPoint = '/admin/tableRegsitrations';
 
   constructor() { }
 

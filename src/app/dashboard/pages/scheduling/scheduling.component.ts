@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchedulingComponent implements OnInit {
 
-  public tableEndPoint = '/admin/table';
+  public tableEndPoint = '/admin/tableSchedules';
 
   constructor() { }
 

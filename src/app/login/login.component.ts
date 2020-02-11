@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from  '@angular/forms';
 import { Router } from '@angular/router';
 import { StorageService } from '@services';
+import {ApiService} from '@services'
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,10 @@ import { StorageService } from '@services';
 export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private storage: StorageService, private router: Router) { }
+  constructor(private formBuilder: FormBuilder,
+              private storage: StorageService,
+              private router: Router,
+              private apiService: ApiService) { }
 
   ngOnInit() {
     this.loginForm  =  this.formBuilder.group({
@@ -21,7 +25,14 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.storage.setObject('user', this.loginForm.value);
-    this.router.navigate(['']);
+    this.apiService.post('/admin/login', this.loginForm.value).then(response => {
+      console.log(response);
+      if(response.login !== false){
+          this.storage.setObject('user', response);
+          this.router.navigate(['']);
+        }
+      }, err => {
+        alert("Usuário não encontrado");
+    })
   }
 }

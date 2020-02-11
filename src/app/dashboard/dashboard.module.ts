@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
+import {MatTabsModule} from '@angular/material/tabs';
 import { HeaderComponent } from './components/header/header.component';
 import { TableComponent } from './components/iTable/iTable.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -33,6 +34,7 @@ import { SchedulingComponent } from './pages/scheduling/scheduling.component';
     MatPaginatorModule,
     DashboardRoutingModule,
     MatProgressSpinnerModule,
+    MatTabsModule,
   ]
 })
 export class DashboardModule { }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RefundComponent implements OnInit {
 
-  public tableEndPoint = '/admin/table';
+  public tableEndPoint = '/admin/tableRefund';
 
   constructor() { }
 
