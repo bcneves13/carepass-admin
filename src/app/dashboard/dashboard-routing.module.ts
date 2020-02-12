@@ -9,7 +9,7 @@ import { SchedulingComponent } from './pages/scheduling/scheduling.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'refund',
+    redirectTo: 'registration',
     pathMatch: 'full'
   },
   {

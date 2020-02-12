@@ -10,7 +10,7 @@
                     {{column == 'loading' ? '' : element[column]}} </mat-cell>
             </ng-container>
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row [class.loading]="column == 'loading'" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            <mat-row [class.loading]="displayedColumns[0] == 'loading'" *matRowDef="let row; columns: displayedColumns;"></mat-row>
         </table>
         <mat-paginator showFirstLastButtons [pageSizeOptions]="itemsPerPage" [length]="resultsLength"></mat-paginator>
     </div>
